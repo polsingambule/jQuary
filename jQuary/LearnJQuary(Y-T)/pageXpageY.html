@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>pageX & pageY</title>
+</head>
+<style>
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#result{
+    width: 90%;
+    height:250px;
+    border: 2px solid black;
+    background-color: rgb(24, 255, 159);
+}
+#box{
+    background-color: red;
+    padding:5px;
+    height: 25px;
+    width: 25px;
+}
+</style>
+<body>
+    <h2><u># pageX & pageY</u></h2>
+    <br>
+    <div id="result">
+         
+    </div>
+
+    <div id="box"></div>
+    <script>
+        $(document).ready(function(){
+            $(document).mousemove(function(event){
+                $('#result').text("X :- " + event.pageX +  " / Y :- " + event.pageY);
+
+                var x = event.pageX;
+                var y = event.pageY;
+
+                $('#box').offset({top:y,left:x});
+            });
+        });
+    </script>
+</body>
+</html>

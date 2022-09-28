@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>Append Prepend</title>
+</head>
+<style>
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#box{
+    width: 90%;
+    padding:10px;
+    border: 2px solid #000;
+}
+.boxbg{
+    background-color: blue;
+}
+
+</style>
+<body>
+    <div id="main">
+        <h2>Append & Prepend</h2>
+        <div id="box" class="boxclass">
+            <h2>Text Box</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <br>  
+        <button id="appendBtn">Append</button>
+        <button id="prependBtn">Prepend</button>
+        <!--<br><br><br>  
+         <ol>
+            <li>List Item 1</li>
+            <li>List Item 2</li>
+            <li>List Item 3</li>
+            <li>List Item 4</li>
+            <li>List Item 5</li>
+        </ol> -->
+    </div>
+    <script>
+        $(document).ready(function(){
+         $('#appendBtn').click(function(){
+            $('#box').append("<h2>Polsing Ambule</h2>");
+         });
+
+
+         $('#prependBtn').click(function(){
+            $('#box').prepend("<h3>Polsing Ambule</h3>");
+         });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>Get</title>
+</head>
+<style>
+#main1 {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#box{
+    width: 90%;
+    background-color: pink;
+    padding:10px;
+    border: 1px solid #000;
+    
+}
+
+</style>
+<body>
+    <div id="main1">
+            <h2>Get</h2>
+           <div id="box" class="polsing">
+                <h2>Text Box</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+           </div><br>  
+    </div>
+    <br><br><br><br>
+
+    <div id="main">
+        <h2>Form Event</h2>
+        <form action="" id="sform">
+            <label for="">Name:-</label>
+            <input type="text" id="name"><br><br>
+            <label for="">Class:-</label>
+            <input type="text" id="class"><br><br>
+            <label for="">Country:-</label>
+            <select id="contry">
+                <option value="india">India</option>
+                <option value="japan">Japan</option>
+                <option value="america">America</option>
+                <option value="chine">Chine</option>
+            </select><br><br>
+            <input type="submit">
+        </form>
+    <div class="box" id="test" style="border:1px solid red;margin-top:20px;"></div></div>
+</div>
+
+
+    <script>
+        $(document).ready(function(){
+            // var a = $('#box').html();
+            // console.log(a);
+
+            // var a = $('body').html();
+            // console.log(a);
+
+            // var a = $('#box p').html();
+            // console.log(a);
+
+            ///////====text
+
+            // var a = $('#box p').text();
+            // console.log(a);
+
+            // var a = $('#box').text();
+            // console.log(a);
+
+            ///////======= attr
+
+            // var a = $('#box').attr('class');
+            // console.log(a);
+
+             ///////======= val
+
+             var a = $('#box').val('class');
+            console.log(a);
+        });
+    </script>
+
+    <!-- Form Html Script -->
+
+   
+         <script>
+        $(document).ready(function(){
+            $('#sform').submit(function(){
+                var name = $('#name').val();
+                var classname = $('#class').val();
+                var contry = $('#contry').val();
+
+                alert("hellow " + name + " Class : "+classname + " Country : " + contry );
+            });
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>Wrap() & Unwrap()</title>
+</head>
+<style>
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#box{
+    width: 90%;
+    padding:10px;
+    border: 2px solid #000;
+    background-color: rgb(238, 255, 1);
+}
+#test{
+    background-color: palevioletred;
+    padding: 2px;
+}
+</style>
+<body>
+    <div id="main">
+        <h2><u>Wrap() & Unwrap()</u></h2><br>
+        <div id="box" class="boxClass">
+            <h2>Text Box</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <br>  
+        <br> 
+        <button id="wrapBtn">Wrap()</button>
+        <button id="unwrapBtn">Unwrap()</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+             ///=== wrap
+
+            $('#wrapBtn').click(function(){
+                $("#box p").wrap('<div id="test"></div>'); // <h2></h2>
+            });
+
+            ///=== Unwrap
+
+            $('#unwrapBtn').click(function(){
+                $("#box p").unwrap();
+            });
+        });
+    </script>
+</body>
+</html>

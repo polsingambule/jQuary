@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>Form Events</title>
+</head>
+<style>
+#main {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+</style>
+<body>
+    <div id="main">
+            <h2>Form Event</h2>
+            <form action="" id="sform">
+                <label for="">Name:-</label>
+                <input type="text" id="name"><br><br>
+                <label for="">Class:-</label>
+                <input type="text" id="class"><br><br>
+                <label for="">Country:-</label>
+                <select id="contry">
+                    <option value="india">India</option>
+                    <option value="japan">Japan</option>
+                    <option value="america">America</option>
+                    <option value="chine">Chine</option>
+                </select><br><br>
+                <input type="submit">
+            </form>
+        <div class="box" id="test" style="border:1px solid red;margin-top:20px;"></div></div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#name,#class,#contry").focus(function(){
+                $(this).css('background-color','pink');
+            });
+
+            $("#name,#class,#contry").blur(function(){
+                $(this).css('background-color','');
+            });
+
+            $("#contry").change(function(){
+                //$(this).css('background-color','pink');
+                var a = $(this).val();
+                $('#test').html(a);
+            });
+        });
+
+            $("#name,#class").select(function(){
+                $(this).css('background-color','yellow');
+            });
+
+            $("#sform").submit(function(){
+                //console.log("Form Submitted");
+                alert("Form Submitted");
+            });
+  
+    </script>
+</body>
+</html>

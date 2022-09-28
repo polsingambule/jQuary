@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-" content="IE=edge">
+    <meta name="viewport" cCompatibleontent="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>Ancestore Methods</title> 
+</head>
+<style>
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#main{
+    background-color: rgb(236, 38, 153);
+    padding: 5px 20px 50px;
+    border: 1px solid rgb(3, 0, 0);
+}
+#outer{
+    background-color: rgb(203, 38, 236);
+    padding: 5px 50px 50px;
+    border: 1px solid rgb(0, 0, 0);
+}
+#inner{
+    background-color: rgb(236, 167, 38);
+    padding: 5px 50px 100px;
+    border: 1px solid rgb(0, 0, 0);
+}
+#inner div{
+    float: left;
+    padding: 30px 25px;
+    background-color: aqua;
+    margin: 0px 5px;
+}
+</style>
+<body>
+        <div id="main-outer">
+            <h2>Main Outer</h2>
+            <div id="outer">
+                <h2>Outer</h2>
+                <div id="inner">
+                    <h2 id="child-head">Inner</h2>
+                    <div>A</div>
+                    <div>B</div>
+                    <div id="child-c">C</div>
+                    <div>D</div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+    <script>
+       $(document).ready(function(){
+          $('#child-c').offsetParent('#main-outer').css('background', 'red');
+       });
+    </script>
+</body>
+</html>

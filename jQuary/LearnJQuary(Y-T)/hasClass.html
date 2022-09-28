@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-" content="IE=edge">
+    <meta name="viewport" cCompatibleontent="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>hasClass</title> 
+</head>
+<style>
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#box{
+    background-color: pink;
+    border: 2px solid blue;
+    padding: 20px;
+    width:50%;
+}
+</style>
+<body style="width:800px ;">
+    <div id="main">
+        <h2><u>hasClass()</u></h2><b></b>
+        <div id="box" class="test">
+            <h1 class="test-2 abc efg xyz">Text Box</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <br>
+        <button id="hasClassBtn">Has Class</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            // $('#hasClassBtn').click(function(){
+            //     console.log($('#box').hasClass('test'));
+            // });
+
+            /// Next
+            $('#hasClassBtn').click(function(){
+                // console.log($('#box').hasClass('test'));
+                var x = $('#box h1').hasClass('test-2');
+
+                if (x == true){
+                    console.log('Yes');
+                }else{
+                    console.log('No');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

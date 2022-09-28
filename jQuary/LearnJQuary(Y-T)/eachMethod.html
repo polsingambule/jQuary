@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-" content="IE=edge">
+    <meta name="viewport" cCompatibleontent="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>each() Methods</title> 
+</head>
+<style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+ul li{
+    font-size: 25px;
+}
+</style>
+<body>
+    <h1>each() Methods</h1>
+    <br><br><br>
+            <ul>
+                <li>Apple</li>
+                <li><span>Mango</span></li>
+                <li>Banana</li>
+                <li>Grapes</li>
+                <li>Orange</li>
+            </ul>
+    <script>
+       $(document).ready(function(){
+            // $('li').each(function(){
+            //     console.log($(this).text());
+            // });
+
+            $('li').each(function(){
+                $(this).text("Hello");
+            });
+       });
+    </script>
+</body>
+</html>

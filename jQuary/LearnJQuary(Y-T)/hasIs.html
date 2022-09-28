@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-" content="IE=edge">
+    <meta name="viewport" cCompatibleontent="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>has() & is() Methods</title> 
+</head>
+<style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+#content1{
+    background-color: rgb(193, 193, 233);
+    padding:20px;
+    border: 1px solid rgb(0, 0, 0);
+}
+</style>
+<body>
+    <h1>has() & is() Methods</h1>
+        <div id="main-outer">
+            <div id="content1">
+                <p class="test">Lorem Ipsum is <strong> dummy text </strong> of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industr> simply.</p>
+                <p>Lorem Ipsum is <span class="test"> dummy text of the printing</span> and typesetting industry.</p>
+            </div>
+            <ul>
+                <li>Apple</li>
+                <li><span>Mango</span></li>
+                <li>Banana</li>
+                <li>Grapes</li>
+                <li>Orange</li>
+            </ul>
+            <br>             
+        </div>
+        <p>Lorem Ipsum is <b> simply dummy text </b>of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+    <script>
+       $(document).ready(function(){
+        // $('p').has('b').css('background','red');
+        // $("li").has('span').css('background','gold');
+        // $("p").has('.test').css('background','green');
+
+        // ===============
+        $('p').click(function(){
+            if($(this).parent().is('div')){
+            $(this).css('background','gold');
+        }
+        });
+       });
+    </script>
+</body>
+</html>

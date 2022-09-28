@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .error{
+        color: red;
+    }
+</style>
+<body>
+    <div class="container">
+       <form id="frm" method="post" action="#"> 
+          <label>Name:- </label>
+          <input type="text" id="name" name="name" placeholder="Enter your name"> 
+          <p id="name-error" class="error"></p>
+            <br/>
+
+             <label>Email:-</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <p id="email-error" class="error"></p>
+             <br/>
+
+             <label>Password:-</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <p id="password-error" class="error"></p>
+             <br/>
+
+             <label>Address:-</label>
+                <textarea type="text" id="address" name="address" placeholder="Enter your address"></textarea>
+                <p id="address-error" class="error"></p>
+             <br/><br/>
+
+             <input type="submit" value="Submit">
+       </form>
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" ></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script>
+    jQuery('#frm').validate({
+       rules:{
+          name:"required",
+          email:{
+             required:true,
+             email:true
+          },
+          password:{
+             required:true,
+             minlength:5
+          },
+          address:{
+             required:true,
+             minlength:5
+          },
+
+       },messages:{
+          name:"Please enter your name",
+          email:{
+             email:"Please enter valid email",
+          },
+          password:{
+             required:"Please enter your password"
+          },
+          address:{
+            required:"Please enter your address"
+          }
+       },
+
+       submitHandler:function(form){
+          form.submit();
+       }
+    });
+ </script>
+ </body>
+</html>

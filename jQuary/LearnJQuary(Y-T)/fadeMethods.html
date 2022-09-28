@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-" content="IE=edge">
+    <meta name="viewport" cCompatibleontent="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>Fade Methods</title> 
+</head>
+<style>
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#box{
+    background-color: rgb(99, 21, 243);
+    border: 2px solid rgba(217, 255, 0, 0.904);
+    padding: 20px;
+    width:50%;
+}
+</style>
+<body style="width:800px ;">
+    <div id="main">
+        <h2><u>Fade Methods</u></h2>
+        <b></b>
+
+        <div id="box" class="test">
+            <h1>Text Box</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <br>
+        <button id="fadeOutBtn">FadeOut</button>
+        <button id="fadeInBtn">FadeIn</button>
+        <button id="fadetoggleBtn">FadeTaggle</button>
+        <button id="fadeToBtn">FadeTo transparent</button>
+    </div>
+
+    <script>
+       $(document).ready(function(){
+            $('#fadeOutBtn').click(function(){
+                $('#box').fadeOut(2000,function(){
+                    console.log("Now it is Hidden");
+                }); // parameters=== show, fast,2000
+            });
+
+            $('#fadeInBtn').click(function(){
+                $('#box').fadeIn(3000,function(){
+                    console.log("Now it is Show");
+                }); // parameters=== show, fast ,1000
+            });
+
+            $('#fadetoggleBtn').click(function(){
+                $('#box').fadeToggle(1000,function(){
+                    console.log("Now it is Taggle");
+                }); // parameters=== show, fast ,1000
+            });
+       });
+
+       //=========fadeTo
+       $('#fadeToBtn').click(function(){
+                $('#box').fadeTo(2000,0.5);
+                    // call back funcrion use
+            });
+
+    </script>
+</body>
+</html>

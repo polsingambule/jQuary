@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>After() & Before()</title>
+</head>
+<style>
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#box{
+    width: 90%;
+    padding:10px;
+    border: 2px solid #000;
+    background-color: rgb(247, 230, 0);
+}
+
+</style>
+<body>
+    <div id="main">
+        <h2><u>After () & Before ()</u></h2><br>
+        <div id="box" class="boxclass">
+            <h2>Text Box</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <br>  
+        <button id="afterBtn">After</button>
+        <button id="beforeBtn">Before</button>
+       
+    </div>
+    <script>
+        $(document).ready(function(){
+         $("#afterBtn").click(function(){
+            $('#box').after("<h3>After : Ambule</h3><p>This Is Surname</p>")
+         });
+
+         $("#beforeBtn").click(function(){
+            $('#box').before("<h3>Before : Polsing</h3><span>This Is Name</span>")
+         });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<title>Registation</title>
+</head>
+<style>
+        p{
+    margin: 0px;
+    color: red;
+    display: inline;
+    margin-left: 10px;
+}
+label {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+</style>
+	<script>
+		       $(document).ready(function(){
+               
+                /*On Submit Buton click */
+                $(".enter").click(function(){
+                    //alert("Alert Box");
+                    var username = $("#firstName").val();
+                    var password = $("#lasttName").val();
+                    var password = $("#emailName").val();
+                    var password = $("#numberName").val();
+                    var password = $("#d_o_b_Name").val();
+                    var password = $("#address_Name").val();
+
+
+                    if(firstName.value == ""){
+                        $("#firstName_error").html("First Name is Empty");
+                        $("#firstName_error").css("color", "red");
+                    }else{
+                        $("#firstName_error").html("Valid first Name");
+                        $("#firstName_error").css("color", "green");
+                    }
+
+                    if(lasttName.value == ""){
+                        $("#lasttName_error").html("Last Name is Empty");
+                        $("#lasttName_error").css("color", "red");
+                    }else{
+                        $("#lasttName_error").html("Valid Last Name");
+                        $("#lasttName_error").css("color", "green");
+                    }
+
+                    if(lasttName.value == ""){
+                        $("#lasttName_error").html("Last Name is Empty");
+                        $("#lasttName_error").css("color", "red");
+                    }else{
+                        $("#lasttName_error").html("Valid Last Name");
+                        $("#lasttName_error").css("color", "green");
+                    }
+
+                    if(emailName.value == ""){
+                        $("#emailName_error").html("Email is Empty");
+                        $("#emailName_error").css("color", "red");
+                    }else{
+                        $("#emailName_error").html("Valid Email");
+                        $("#emailName_error").css("color", "green");
+                    }
+
+                    if(numberName.value == ""){
+                        $("#numbeName_error").html("Number is Empty");
+                        $("#numbeName_error").css("color", "red");
+                    }else{
+                        $("#numbeName_error").html("Valid Number");
+                        $("#numbeName_error").css("color", "green");
+                    }
+
+                    if(d_o_b_Name.value == ""){
+                        $("#d_o_b__error").html("Date of Birth is Empty");
+                        $("#d_o_b__error").css("color", "red");
+                    }else{
+                        $("#d_o_b__error").html("Valid Date of Birth");
+                        $("#d_o_b__error").css("color", "green");
+                    }
+
+                    if(address_Name.value == ""){
+                        $("#address_error").html("Address is Empty");
+                        $("#address_error").css("color", "red");
+                    }else{
+                        $("#address_error").html("Valid Address");
+                        $("#address_error").css("color", "green");
+                    }
+
+                });
+
+            });
+	</script>
+<body>
+<div id="form-container">
+        <form action="#">
+            <label>Enter First Name :-</label>
+            <input id="firstName" type="text" placeholder="Enter First Name">
+            <p id="firstName_error"></p><br><br>
+
+            <label>Enter Last Name :-</label>
+            <input id="lasttName" type="text" placeholder="Enter Last Name">
+            <p id="lasttName_error"></p><br><br>
+
+            <label>Enter Email :-</label>
+            <input id="emailName" type="text" placeholder="Enter Email" requirede>
+            <p id="emailName_error"></p><br><br>
+
+            <label>Enter Mobile No :-</label>
+            <input id="numberName" type="text" placeholder="Enter Mobile No">
+            <p id="numbeName_error"></p><br><br>
+
+            <label>Enter Date of Birth :-</label>
+            <input id="d_o_b_Name" type="text" placeholder="Enter Date of Birth">
+            <p id="d_o_b__error"></p><br><br>
+
+            <label>Enter Address :-</label>
+            <textarea id="address_Name" type="text" placeholder="Enter Address" cols="25"></textarea>
+            <p id="address_error"></p><br><br><br><br>
+
+
+            <input id="submit" class="enter" type="Submit">
+        </form>
+    </div>
+</body>
+</html>

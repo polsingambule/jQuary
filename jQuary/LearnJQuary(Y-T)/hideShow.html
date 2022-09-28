@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-" content="IE=edge">
+    <meta name="viewport" cCompatibleontent="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>Hide & Show</title> 
+</head>
+<style>
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#box{
+    background-color: rgb(180, 26, 52);
+    border: 2px solid blue;
+    padding: 20px;
+    width:50%;
+}
+</style>
+<body style="width:800px ;">
+    <div id="main">
+        <h2><u>Hide & Show() Method</u></h2>
+        <b></b>
+
+        <div id="box" class="test">
+            <h1 class="#">Text Box</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <br>
+        <button id="hideBtn">Hide()</button>
+        <button id="showBtn">Show()</button>
+        <button id="toggleBtn">Taggle</button>
+    </div>
+
+    <script>
+       $(document).ready(function(){
+            $('#hideBtn').click(function(){
+                $('#box').hide(1000,function(){
+                    console.log("Now It is Hidden")
+                }); // fast,show,1000,callback function
+            });
+
+            $('#showBtn').click(function(){
+                $('#box').show(1000,function(){
+                    console.log("Now It is Show")
+                }); // fast
+            });
+
+            $('#toggleBtn').click(function(){
+                $('#box').toggle(1000,function(){
+                    console.log("Hey Toggle")
+                }); // fast);
+            });
+       });
+    </script>
+</body>
+</html>

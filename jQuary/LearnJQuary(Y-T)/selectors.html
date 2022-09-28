@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>Selector</title>
+</head>
+<style>
+#main {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap:50px;
+}
+div#test1 {
+    padding: 20px;
+    border: 2px solid #ff0bf7;
+}
+</style>
+<body>
+    <div id="main">
+        <div id="test1">
+            <h2>Text-Box 1</h2>
+            <p>Dummy Text Demonstrate fadeIn with different parameters.Dummy Text Demonstrate fadeIn with different parameters.</p>
+        </div>
+
+        <div id="test2">
+            <ul id="list">
+                <li>Hellow-1</li>
+                <li>Hellow-2</li>
+                <li>Hellow-3</li>
+                <li>Hellow-4</li>
+                <li>Hellow-5</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        // Advance Selectot ///// ==.className idNAme tagNAme
+
+        $(document).ready(function(){
+          //$('#list').css("color","red");//,"border","1px solid black"
+
+          // $('#list li').css("border","1px solid red");//"border","1px solid black"
+
+          // $('*').css("border","1px solid red");//"border","1px solid black"
+
+         // $('li:first').css("border","1px solid red"); // using Last
+
+         //$('ul li:eq(2)').css("border","1px solid red");
+
+         //$('ul li:gt(2)').css("border","1px solid red");
+
+         $('ul li:lt(2)').css("border","1px solid red");
+        });
+    </script>
+</body>
+</html>

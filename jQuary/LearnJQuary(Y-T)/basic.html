@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>BAsic</title>
+</head>
+<style>
+#main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap:50px;
+}
+div#test1 {
+    padding: 25px;
+    background: #17fcf0;
+    border: 2px solid #ff0bf7;
+}
+div#test2 {
+    padding: 25px;
+    background: #30b584;
+    border: 2px solid #ff0bf7;
+}
+</style>
+<body>
+    <div id="main">
+        <div id="test1">
+            <h2>Text-Box 1</h2>
+            <p>Dummy Text Demonstrate fadeIn with different parameters.Dummy Text Demonstrate fadeIn with different parameters.</p>
+        </div>
+
+        <div id="test2">
+            <h2>Text-Box 2</h2>
+            <p>Dummy Text Demonstrate fadeIn with different parameters.Dummy Text Demonstrate fadeIn with different parameters.</p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+           var a = $('#test1').html();
+           console.log(a);
+
+           var a = $('#test2').html();
+           console.log(a);
+        });
+    </script>
+</body>
+</html>

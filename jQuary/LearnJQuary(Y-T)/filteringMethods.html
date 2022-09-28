@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-" content="IE=edge">
+    <meta name="viewport" cCompatibleontent="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>Filtering Methods</title> 
+</head>
+<style>
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+#content1{
+    background-color: rgb(240, 199, 223);
+    padding:20px;
+    border: 1px solid rgb(0, 0, 0);
+}
+#content2{
+    background-color: rgb(126, 240, 215);
+    padding:20px;
+    border: 1px solid rgb(0, 0, 0);
+}
+</style>
+<body>
+    <h1>Filtering Methods</h1>
+        <div id="main-outer">
+            <div id="content1">
+                <p class="test">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <ul>
+                <li>Apple</li>
+                <li>Mango</li>
+                <li>Banana</li>
+                <li>Grapes</li>
+                <li>Orange</li>
+            </ul>
+            <div id="content2">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+        </div>
+        <br>
+
+    <script>
+       $(document).ready(function(){
+        // $('#content2 p').first().css('background','green');
+        // $('#content2 p').last().css('background','Yellow');
+        // $('ul li').last().css('background','pink');
+
+        // $('ul li').eq(2).css('background','orange');
+        // $('ul li').eq(-1).css('background','#525');
+
+        // $('p').filter('.test').css('background','gold');
+
+        // $('p').not('.test').css('background','red');
+
+        $('ul li').slice(1,4).css('background','red');
+       });
+    </script>
+</body>
+</html>

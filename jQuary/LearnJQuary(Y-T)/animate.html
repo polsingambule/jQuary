@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-" content="IE=edge">
+    <meta name="viewport" cCompatibleontent="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>Animate Methods</title> 
+</head>
+<style>
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#box{
+    background-color: rgb(236, 128, 65);
+    border: 2px solid rgba(22, 37, 248, 0.904);
+    width:20%;
+    height:100px;
+    text-align: center;
+    padding: 20px 5px 0px;
+    font-size:15px;
+    font-weight: bold;
+    position: relative;
+}
+</style>
+<body>
+    <div id="main">
+        <h2><u>Animate Methods</u></h2>
+        <b></b>
+        <div id="box">Polsing Ambule</div>
+        <br>
+        <button id="animateBtn">Animate</button>
+    </div>
+
+    <script>
+       $(document).ready(function(){
+           $("#animateBtn").click(function(){
+                $("#box").animate({left : '150px'},3000,function(){
+                    console.log("Fist Animation Complete");
+                }); // width + 150px
+                $("#box").animate({top : '150px'});
+                $("#box").animate({width : '200px'});
+                $("#box").animate({fontSize : '20px'},2000);
+            });
+       });
+    </script>
+</body>
+</html>

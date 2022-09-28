@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>KeyBoard</title>
+</head>
+<style>
+#main {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap:50px;
+}
+div .test {
+    padding: 20px;
+    border: 2px solid #ff0bf7;
+    background-color: rgb(157, 255, 0);
+}
+</style>
+<body>
+    <div id="main">
+        <div class="test" id="box">
+            <h2>Text-Box 1</h2>
+            <p>Dummy Text Demonstrate fadeIn with different parameters.Dummy Text Demonstrate fadeIn with different parameters.</p>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('body').keypress(function(){
+                $(this).css('background-color','blue');
+            });
+
+            $('body').keyup(function(){
+                $(this).css('background-color','red');
+            });
+
+            $('body').keydown(function(){
+                $(this).css('background-color','green');
+            });
+        });
+  
+    </script>
+</body>
+</html>

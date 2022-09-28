@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>wrapAll() & wraplnner()</title>
+</head>
+<style>
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#box{
+    width: 90%;
+    padding:10px;
+    border: 2px solid #000;
+    background-color: rgb(238, 255, 1);
+}
+#test{
+    background-color: rgb(228, 199, 208);
+    padding: 5px;
+}
+#red{
+    color: red;
+}
+</style>
+<body>
+    <div id="main">
+        <h2><u>wrapAll() & wraplnner()</u></h2><br>
+            <h1>This Is paragrap</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        
+        <br>  
+        <br> 
+        <button id="wrapallBtn">wrapAll()</button>
+        <button id="wrapinnerBtn">wrapInner()</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+             ///=== wrapAll()
+
+            $('#wrapallBtn').click(function(){
+                $("p").wrapAll('<div id="test"></div>');
+            });
+
+            ///=== wrapInner()
+
+            $('#wrapinnerBtn').click(function(){
+                $("h1").wrapInner('<span id="red">Polsing Ambule--</span>');
+            });
+        });
+    </script>
+</body>
+</html>

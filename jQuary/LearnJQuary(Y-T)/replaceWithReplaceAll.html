@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>ReplaceWith & RepaceAll</title>
+</head>
+<style>
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#box{
+    width: 90%;
+    padding:10px;
+    border: 1px solid #000;
+    background-color: rgb(216, 163, 159);
+}
+
+</style>
+<body>
+    <div id="main">
+        <h2><u>ReplaceWith & RepaceAll</u></h2><br>
+        <div id="box" class="boxClass">
+            <h2>Text Box</h2>
+            <p>1 - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p>2 - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p>3 - Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+        <br>  
+        <br> 
+        <button id="replaceBtn">Replace</button>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            //// === ReplaceWith
+
+            // $('#replaceBtn').click(function(){
+            //     $("#box p:nth-child(3)").replaceWith("<h3>Polsing Ambule</h3>");
+            // });
+
+            //// === RepaceAll
+
+            $('#replaceBtn').click(function(){
+                $("<h3>Ambule Polsing</h3>").replaceAll("#box p"); // "#box p;first" ====use only tag 
+            });
+        });
+    </script>
+</body>
+</html>

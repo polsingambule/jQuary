@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jQuery.js"></script>
+    <title>stopPropagation</title>
+</head>
+<style>
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+#box{
+    width: 90%;
+    /* height:250px; */
+    padding: 30px 20px;
+    border: 2px solid black;
+    background-color:rgba(240, 28, 120, 0.959);
+}
+
+</style>
+<body>
+    <h1><u># stopPropagation</u></h1>
+    <br><br>
+
+    <div id="box">
+        <h1>Text box</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        <button>Test Button</button>
+    </div>
+    <br>
+    <h3></h3>
+    <script>
+        $(document).ready(function(){
+            $('#box').click(function(){
+                alert("The Div Element Was Clicked");
+            });
+
+            $('p').click(function(event){
+                event.stopPropagation();
+                alert("The P Element Was Clicked" + event.isPropagationStopped);
+            });
+
+            $('button').click(function(){
+                alert("The Button Element Was Clicked");
+            });
+        });
+    </script>
+</body>
+</html>
